@@ -1,0 +1,149 @@
+<!-- Referência http://www.w3schools.com/css/css_rwd_viewport.asp -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>5-Layout responsivo</title>
+        <style>
+        * {
+			box-sizing: border-box; /* não contar largura da borda */
+        }
+		
+        .row::after {
+        content: "";
+        clear: both;
+        display: block;
+        }
+        
+		[class*="col-"] {
+			float: left;
+			padding: 15px;
+        }
+        		
+		html {
+			font: normal 100% "Lucida Sans", sans-serif;
+			background: #E2E1E7;
+        }
+        .header {
+			background-color: #383838;
+			color: #ffffff;
+			padding: 15px;
+			
+        }
+        .menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+        }
+        .menu li {
+			padding: 8px;
+			margin-bottom: 7px;
+			background-color :#33b5e5;
+			color: #ffffff;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .menu li a {
+			color: #fff;
+			text-decoration: none;
+        }
+        .menu li:hover {
+			background-color: #0099cc;
+        }
+        /* conteudo */
+        .conteudo {
+			background: #fff;
+			margin: 15px 0 0;
+			color: #2a2a2b;
+        }
+        .conteudo h1{
+			color: #333366;
+        }
+        .aside {
+			background-color: #33b5e5;
+			padding: 15px;
+			color: #ffffff;
+			text-align: center;
+			font-size: 1em;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .footer {
+			background-color: #333;
+			color: #ffffff;
+			text-align: center;
+			padding: 15px;
+        }
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+		
+		/* tela menor que 960px ou se a tela for no máximo 960px */
+        @media only screen and (max-width: 960px) {
+			/* For mobile phones: */
+			[class*="col-"] {
+				width: 50%;
+			}
+			
+			.logo{
+			
+			}
+        }
+
+		/* tela menor que 768px no máximo 768px */
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+		[class*="col-"] {
+			width: 100%;
+        }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Exemplo</h1>
+        </div>
+        <div class="row">
+            <div class="col-3 menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>Sobre Nós</li>
+                    <li>Portifólio</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
+            <div class="col-6 conteudo">
+                <h1>Info Xeo</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p>
+            </div>
+            <div class="col-3 right">
+                <div class="aside">
+                    <h2>O que?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>Onde?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua</p>
+                    <h2>Como?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Redimensionar a janela do navegador para ver como o conteúdo responder ao redimensionamento..</p>
+        </div>
+    </body>
+</html>

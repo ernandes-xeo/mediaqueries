@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>3- Exemplo Media Queries</title>
+		<style>
+		body {
+				background-color:red;
+			}
+		
+		.texto{
+			background: #fff;
+			font: 20px Verdana;
+		}
+		
+		/* navegador até 600px */
+		@media only screen and (max-width: 600px) {
+			body {
+				background-color:green;
+			}
+			
+			.texto{
+				background: yellow;
+				font: 12px Verdana;
+			}
+		}	
+		</style>
+	</head>
+	<body>
+		<p id="boxe" class="texto" >Redimensionar a janela do navegador. Quando a largura deste documento é inferior a 500 pixels</p>	
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>3- Exemplo Media Queries</title>
+		<style>
+		body{
+			padding: 15px;
+			background: #eee;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		.tela{
+			border: 1px solid black;
+			padding: 5px 10px;
+			margin: 40px;
+		}
+		
+		/* max-width */
+		@media only screen and (max-width: 600px){
+			.um{ background: blue }
+		}
+		
+		/* min-width */
+		@media only screen and (min-width: 900px) {
+			.dois{ background: red }
+		}
+		
+		/* min-width e max-width */
+		@media only screen and (min-width: 600px)  and (max-width: 900px){
+			.tres{ 
+				background: #000;
+				color: #fff;
+			}
+			
+		}
+		
+		@media only screen and (max-device-width: 480px){
+			.quatro{ background: #ccc; }
+		}
+		
+		
+		</style>
+	</head>
+	<body>
+		<h1>Teste de Media Queries</h1>
+		<p id="boxe" class="texto" >Redimensionar a janela do navegador. Quando a largura deste documento é inferior a 500 pixels</p>
+		
+		<div class="tela um">Tela inferior a 600px</div>
+		<div class="tela tres">Tela entre 600px e 900px</div>		
+		<div class="tela dois">Tela for maior que 900px</div>
+		<div class="tela quatro">dispositivos no maximo 480px</div>
+	</body>
+</html>

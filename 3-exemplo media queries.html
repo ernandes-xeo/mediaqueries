@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>4-3- Exemplo Media Queries com colunas </title>
+		<style>
+		
+		*{
+			box-sizing: border-box; 
+		 	margin: 0;
+		 	padding: 0;
+		}	
+
+		.content{
+			width: 780px;
+			margin: 0 auto;
+		}
+		
+		.logo{
+			width: 35.8974358974359%;  /* 280px/780px */
+			height: 57.14285714285714%;
+			background: red;
+			vertical-align: center;
+			line-height: 10em;
+			text-align: center;
+			
+
+		}
+		/* For mobile phones: */		
+		[class*="col-"] {
+		width: 100%; 
+		float: left;
+		border: 1px solid red;
+		}
+		
+		.menu{
+			min-height: 251px;
+		}
+		
+		/* largura maior que 768px ou seja no mínimo 768px */
+		@media only screen and (min-width: 768px) {
+		/* For desktop: */
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+		
+		
+		
+		}
+		</style>
+	</head>
+	<body>
+			<div class="content">
+				<div class="col-12">
+					<div class='logo'>
+							logo
+					</div>
+				</div>
+				<div class='col-3 menu'>
+					menu
+				</div>
+				<div class='col-9'>
+					<p>Layout formatado para 2 tipos de  tela:
+					<p> menor que 768px 100%
+					<p> Maior que 768px 
+					<pre>
+					.col-1 {width: 8.33%;}
+					.col-2 {width: 16.66%;}
+					.col-3 {width: 25%;}
+					.col-4 {width: 33.33%;}
+					.col-5 {width: 41.66%;}
+					.col-6 {width: 50%;}
+					.col-7 {width: 58.33%;}
+					.col-8 {width: 66.66%;}
+					.col-9 {width: 75%;}
+					.col-10 {width: 83.33%;}
+					.col-11 {width: 91.66%;}
+					.col-12 {width: 100%;}
+					</pre>
+				</div>		
+			</div>	
+	</body>
+</html>

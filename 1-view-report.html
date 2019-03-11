@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>1-Com Meta viewport</title>
+		<style>
+			img {
+				 max-width: 100%;				
+			}
+		</style>
+	</head>
+	<body>
+		<div class='texto'>
+			<div class="box">
+			<img src="imagens/dory.jpg"  />
+			</div>
+			<p>
+			O HTML5 introduziu um método para permitir que os designers da Web assumissem o controle sobre a viewport, através da <meta>tag.
+
+			<p>Você deve incluir o seguinte <pre><meta></pre>elemento viewport em todas as suas páginas da web:
+
+			<pre><!-- meta name="viewport" content="width=device-width, initial-scale=1.0" --></pre>
+			<p>
+			Um <meta>elemento viewport fornece instruções do navegador sobre como controlar as dimensões e dimensionamento da página.
+
+			<p>A width=device-widthpeça define a largura da página para seguir a largura da tela do dispositivo (que variará dependendo do dispositivo).
+
+			<p>A initial-scale=1.0peça define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+
+			<p>Aqui está um exemplo de uma página da Web sem a meta tag viewport e a mesma página da Web com a meta tag viewport:
+
+			Os usuários são usados ​​para rolar sites verticalmente, tanto em computadores quanto em dispositivos móveis - mas não horizontalmente!
+			Assim, se o usuário for forçado a rolar horizontalmente, ou diminuir o zoom, para ver toda a página da web, isso resultará em uma má experiência do usuário.
+
+Algumas regras adicionais a seguir:
+<p>
+1. Não use grandes elementos de largura fixa - Por exemplo, se uma imagem é exibida com uma largura maior do que a janela de visualização, pode fazer com que a janela de exibição roda horizontalmente. Lembre-se de ajustar este conteúdo para caber dentro da largura da viewport.
+<p>
+2. NÃO deixe que o conteúdo confie em uma largura de janela de exibição específica para render bem - Desde dimensões de tela e largura em pixels CSS variam amplamente entre dispositivos, o conteúdo não deve depender de uma largura de janela de exibição particular para render bem.
+<p>
+3. Utilize consultas de mídia CSS para aplicar estilo diferente para telas pequenas e grandes - Definir grandes larguras CSS absolutas para elementos de página, fará com que o elemento seja muito grande para a viewport em um dispositivo menor. Em vez disso, considere usar valores de largura relativa, como largura: 100%. Além disso, tenha cuidado ao usar valores de posicionamento absoluto grandes. Isso pode fazer com que o elemento caia fora da viewport em dispositivos pequenos.
+
+		</div>
+	</body>
+</html>
