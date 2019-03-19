@@ -1,0 +1,20 @@
+body {
+background-color:red;
+}
+
+.texto{
+background: #fff;
+font: 20px Verdana;
+}
+
+/* navegador até 600px */
+@media only screen and (max-width: 600px) {
+body {
+background-color:green;
+}
+
+.texto{
+background: yellow;
+font: 12px Verdana;
+}
+}
